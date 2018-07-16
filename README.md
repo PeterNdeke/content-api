@@ -12,6 +12,40 @@ In order to run a comprehensive text of these API, the tester has to install POS
 from here https://www.getpostman.com/apps
 composer is used to text the various api urls
 
+Postman is used to text the various api urls
+
+1) Login: Verb:POST, URL:http://localhost:8000/api/login
+
+2) Register: Verb:POST, URL:http://localhost:8000/api/register
+
+3) List All Contents posted by an authenticated users: Verb:GET, URL:http://localhost:8000/api/contents passing the following headers
+‘headers’ => [
+‘Accept’ => ‘application/json’,
+‘Authorization’ => ‘Bearer ‘.$accessToken,
+
+]
+
+4) Create: Verb:POST, URL:http://localhost:8000/api/contents passing the following header 
+‘headers’ => [
+‘Accept’ => ‘application/json’,
+‘Authorization’ => ‘Bearer ‘.$accessToken,
+ 
+ And the body parameters are as follows 
+ name =>""
+ description=>""
+ file => 
+
+]
+
+5) Show: Verb:GET, URL:http://localhost:8000/api/contents/{id}
+
+6) Update: Verb:PUT, URL:http://localhost:8000/api/contents/{id}
+
+7) Delete: Verb:DELETE, URL:http://localhost:8000/api/contents/{id}
+
+The Url for all users to view the whole contents
+View All  Verb:GET, URL:http://localhost:8000/api/viewAllImages
+
 ```
 
 ```
